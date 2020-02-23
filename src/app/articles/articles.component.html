@@ -7,7 +7,7 @@
 </div>
 
 <div class="post-preview" *ngFor="let item of list;let index = index;let first = first">
-  <div class="post-meta" *ngIf="!first">
+  <div class="post-meta" >
     <a href="profile.html">
       <img [src]="item.author.image" />
     </a>
@@ -19,7 +19,7 @@
       <i class="ion-heart"></i> {{item.favoritesCount}}
     </button>
   </div>
-  <a href="post.html" class="preview-link" *ngIf="!first">
+  <a href="post.html" class="preview-link" >
     <h1>{{item.title}}</h1>
     <p>
       {{item.body}}

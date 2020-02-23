@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular';
   subtitle = 'A place to share your <u>knowledge</u>.';
-  list = [
+  Orilist = [
     {
       title:
         'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
@@ -68,4 +68,17 @@ export class AppComponent {
       favoritesCount: 5
     }
   ];
+
+  list = this.Orilist;
+
+  searchArticles($event) {
+    if ($event) {
+      console.log($event);
+      this.list = this.Orilist.filter(
+        article => article.title.indexOf($event) !== -1
+      );
+    } else {
+      this.list = this.Orilist;
+    }
+  }
 }
