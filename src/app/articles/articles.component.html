@@ -6,6 +6,28 @@
   </ul>
 </div>
 
+<div class="post-preview" *ngFor="let item of list;let index = index;let first = first">
+  <div class="post-meta" *ngIf="!first">
+    <a href="profile.html">
+      <img [src]="item.author.image" />
+    </a>
+    <div class="info">
+      <a href="profile.html" class="author">{{item.author.bio}}</a>
+      <span class="date">{{item.createdAt}}</span>
+    </div>
+    <button class="btn btn-outline-primary btn-sm pull-xs-right">
+      <i class="ion-heart"></i> 29
+    </button>
+  </div>
+  <a href="post.html" class="preview-link" *ngIf="!first">
+    <h1>{{item.title}}</h1>
+    <p>
+      {{item.body}}
+    </p>
+    <span>Read more...</span>
+  </a>
+</div>
+
 <div class="post-preview">
   <div class="post-meta">
     <a href="profile.html">

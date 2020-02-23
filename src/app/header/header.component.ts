@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  search($event) {
+  search1($event) {
     this.invalue = this.keyword;
     this.isHighLight = !this.isHighLight;
     this.fontSiz = this.fontSiz + 2;
